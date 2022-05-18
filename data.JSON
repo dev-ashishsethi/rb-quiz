@@ -1,0 +1,88 @@
+
+[
+  {
+    "_id": "112001a9-f28a-42ae-8e47-051fcdadf43d",
+    "category": "Entertainment: Books",
+    "type": "multiple",
+    "difficulty": "medium",
+    "questions": [
+      {
+        "_id": "17c361fb-85cc-48a3-b603-227ddbd7f83e",
+        "question":
+          "Who wrote the &quot;A Song of Ice And Fire&quot; fantasy novel series?",
+        "correct_answer": "George R. R. Martin",
+        "incorrect_answers": ["George Lucas", "George Orwell", "George Eliot"]
+      },
+      {
+        "_id": "70bc7cfa-7745-45b0-b683-1705323175fc",
+        "question":
+          "Who wrote the 1967 horror novel &quot;Rosemary&#039;s Baby&quot;?",
+        "correct_answer": "Ira Levin",
+        "incorrect_answers": ["Stephen King", "Robert Bloch", "Mary Shelley"]
+      },
+      {
+        "_id": "83b9e927-98e1-451a-8b62-1d4b99b4e039",
+        "question":
+          "In Alice in Wonderland, what is the name of Alice&#039;s kitten?",
+        "correct_answer": "Dinah",
+        "incorrect_answers": ["Oscar", "Heath", "Smokey"]
+      }
+    ]
+  },
+  {
+    "_id": "5b66582b-dc01-40e7-8550-62e867dfd217",
+    "category": "Entertainment: Film",
+    "type": "multiple",
+    "difficulty": "medium",
+    "questions": [
+      {
+        "_id": "84d58fbb-962c-4b83-bddc-a0e7d32d968f",
+        "question":
+          "This movie contains the quote, &quot;I love the smell of napalm in the morning!&quot;",
+        "correct_answer": "Apocalypse Now",
+        "incorrect_answers": ["Platoon", "The Deer Hunter", "Full Metal Jacket"]
+      },
+      {
+        "_id": "59ed43a9-3d88-4047-8d38-cbbc8bced4c4",
+        "question":
+          "What year did the James Cameron film &quot;Titanic&quot; come out in theaters?",
+        "correct_answer": "1997",
+        "incorrect_answers": ["1996", "1998", "1999"]
+      },
+      {
+        "_id": "1ea8d6e5-33d4-4c8d-831b-7b2d855a1e91",
+        "question":
+          "Which actor plays the role of the main antagonist in the 2011 movie &quot;Tower Heist?&quot;",
+        "correct_answer": "Alan Alda",
+        "incorrect_answers": ["Eddie Murphy", "Alec Baldwin", "Kevin Nealon"]
+      }
+    ]
+  },
+  {
+    "_id": "92df56fa-3413-411b-a69f-dff31b791139",
+    "category": "Entertainment: Music",
+    "type": "multiple",
+    "difficulty": "medium",
+    "questions": [
+      {
+        "_id": "19ff9617-d3cb-47bc-922f-099235a77639",
+        "question":
+          "Which artist collaborated with American DJ Dillon Francis to release the song 2016 &quot;Need You&quot;?",
+        "correct_answer": "NGHTMRE",
+        "incorrect_answers": ["LOUDPVCK", "KRNE", "DVBBS"]
+      },
+      {
+        "_id": "a93063e5-d492-42a6-8428-578af187a666",
+        "question": "How many members are in the Japanese rock band SCANDAL?",
+        "correct_answer": "4",
+        "incorrect_answers": ["5", "2", "18"]
+      },
+      {
+        "_id": "93636197-eda4-40f6-a2b2-8d01ae39f06c",
+        "question": "What album did Gorillaz release in 2017?",
+        "correct_answer": "Humanz",
+        "incorrect_answers": ["Plastic Beach", "The Fall", "Demon Days"]
+      }
+    ]
+  }
+]
