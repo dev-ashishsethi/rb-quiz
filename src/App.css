@@ -1,8 +1,16 @@
 @import url("https://r-and-b-ui.netlify.app/component.css");
 
-:root{
-  --grey:#202020
+:root {
+  --grey: #202020;
 }
 .App {
- margin-inline: 10rem;
+  margin-inline: 10rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+.login-btn {
+  margin-top: 8px;
 }
