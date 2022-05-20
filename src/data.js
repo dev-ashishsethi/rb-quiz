@@ -4,6 +4,8 @@ export const data = [
     category: "Books",
     type: "multiple",
     difficulty: "medium",
+    description:
+      "It's a collection of trivia and personality quizzes for huge book lovers — in one place for your convenience. If you enjoy a good book and spend most of your time reading, this quiz is for you!",
     image:
       "https://images.unsplash.com/photo-1550399105-c4db5fb85c18?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     questions: [
@@ -12,19 +14,29 @@ export const data = [
         question:
           'Who wrote the "A Song of Ice And Fire" fantasy novel series?',
         correct_answer: "George R. R. Martin",
-        incorrect_answers: ["George R. R. Martin","George Lucas", "George Orwell", "George Eliot"],
+        incorrect_answers: [
+          "George R. R. Martin",
+          "George Lucas",
+          "George Orwell",
+          "George Eliot",
+        ],
       },
       {
         _id: "70bc7cfa-7745-45b0-b683-1705323175fc",
         question: 'Who wrote the 1967 horror novel "Rosemary\'s Baby"?',
         correct_answer: "Ira Levin",
-        incorrect_answers: ["Ira Levin","Stephen King", "Robert Bloch", "Mary Shelley"],
+        incorrect_answers: [
+          "Ira Levin",
+          "Stephen King",
+          "Robert Bloch",
+          "Mary Shelley",
+        ],
       },
       {
         _id: "83b9e927-98e1-451a-8b62-1d4b99b4e039",
         question: "In Alice in Wonderland, what is the name of Alice's kitten?",
         correct_answer: "Dinah",
-        incorrect_answers: ["Dinah","Oscar", "Heath", "Smokey"],
+        incorrect_answers: ["Dinah", "Oscar", "Heath", "Smokey"],
       },
     ],
   },
@@ -33,6 +45,8 @@ export const data = [
     category: "Film",
     type: "multiple",
     difficulty: "medium",
+    description:
+      "The idea of trivia about movies in itself is so much fun, so now we are going to discuss some easy trivia questions and answers, covering film trivia and movie trivia, perfect for the whole family! Are you ready to answer these movie trivia quiz questions?",
     image:
       "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1159&q=80",
     questions: [
@@ -41,21 +55,31 @@ export const data = [
         question:
           'This movie contains the quote, "I love the smell of napalm in the morning!"',
         correct_answer: "Apocalypse Now",
-        incorrect_answers: ["Apocalypse Now","Platoon", "The Deer Hunter", "Full Metal Jacket"],
+        incorrect_answers: [
+          "Apocalypse Now",
+          "Platoon",
+          "The Deer Hunter",
+          "Full Metal Jacket",
+        ],
       },
       {
         _id: "59ed43a9-3d88-4047-8d38-cbbc8bced4c4",
         question:
           'What year did the James Cameron film "Titanic" come out in theaters?',
         correct_answer: "1997",
-        incorrect_answers: ["1997","1996", "1998", "1999"],
+        incorrect_answers: ["1997", "1996", "1998", "1999"],
       },
       {
         _id: "1ea8d6e5-33d4-4c8d-831b-7b2d855a1e91",
         question:
           'Which actor plays the role of the main antagonist in the 2011 movie "Tower Heist?"',
         correct_answer: "Alan Alda",
-        incorrect_answers: ["Alan Alda","Eddie Murphy", "Alec Baldwin", "Kevin Nealon"],
+        incorrect_answers: [
+          "Alan Alda",
+          "Eddie Murphy",
+          "Alec Baldwin",
+          "Kevin Nealon",
+        ],
       },
     ],
   },
@@ -64,6 +88,8 @@ export const data = [
     category: "Music",
     type: "multiple",
     difficulty: "medium",
+    description:
+      'Are you a music master? See if you can answer these questions that span everything from reggae to reed instruments to "Eleanor Rigby."',
     image:
       "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     questions: [
@@ -72,19 +98,24 @@ export const data = [
         question:
           'Which artist collaborated with American DJ Dillon Francis to release the song 2016 "Need You"?',
         correct_answer: "NGHTMRE",
-        incorrect_answers: ["NGHTMRE","LOUDPVCK", "KRNE", "DVBBS"],
+        incorrect_answers: ["NGHTMRE", "LOUDPVCK", "KRNE", "DVBBS"],
       },
       {
         _id: "a93063e5-d492-42a6-8428-578af187a666",
         question: "How many members are in the Japanese rock band SCANDAL?",
         correct_answer: "4",
-        incorrect_answers: ["4","5", "2", "18"],
+        incorrect_answers: ["4", "5", "2", "18"],
       },
       {
         _id: "93636197-eda4-40f6-a2b2-8d01ae39f06c",
         question: "What album did Gorillaz release in 2017?",
         correct_answer: "Humanz",
-        incorrect_answers: ["Humanz","Plastic Beach", "The Fall", "Demon Days"],
+        incorrect_answers: [
+          "Humanz",
+          "Plastic Beach",
+          "The Fall",
+          "Demon Days",
+        ],
       },
     ],
   },

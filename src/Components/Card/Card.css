@@ -4,26 +4,30 @@
   border-radius: 8px;
   background-color: var(--grey);
 }
-a{
-    background-color: transparent;
+.card-link {
+  display: flex;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
-.quiz-card:hover{
-    transform: scale(1.03);
+.quiz-card:hover {
+  transform: scale(1.03);
 }
-.card-title{
-    text-align: center;
-    background-color: var(--grey);
+.card-title {
+  text-align: center;
+  background-color: var(--grey);
 }
-.card-img{
-    width: 20rem;
-    margin: 1rem;
+.card-img {
+  width: 20rem;
+  margin: 1rem;
 }
-.card-txt{
-    text-align: justify;
-    margin: 10px;
-    margin-block-start: 1rem;
-    background-color: var(--grey);
+.card-txt {
+  text-align: justify;
+  margin: 10px;
+  margin-block-start: 1rem;
+  background-color: var(--grey);
 }
-.w-100{
-    width: 90%;
+.w-100 {
+  width: 90%;
 }

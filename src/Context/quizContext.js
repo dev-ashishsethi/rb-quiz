@@ -1,11 +1,52 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import {
+  firebaseRealtimeDB,
+  realTimeDBRef,
+  get,
+  child,
+} from "../firebase.config";
 
 const QuizContext = createContext();
 
 export function QuizProvider({ children }) {
+  const [dbQues, setDbQues] = useState([]);
   const [questions, setQuestions] = useState([]);
+  const [score, setScore] = useState(0);
+  const [scorePage, setScorePage] = useState([
+    {
+      questionNumber: 0,
+      question: "",
+      yourAnswer: "",
+      color:"",
+      correctAnswer: "",
+    },
+  ]);
+
+  useEffect(() => {
+    (async () => {
+      const dbRef = realTimeDBRef(firebaseRealtimeDB);
+      try {
+        const allQuestions = await get(child(dbRef, "quizDB"));
+
+        setDbQues(allQuestions.val());
+      } catch (error) {
+        console.log(error);
+      }
+    })();
+  }, []);
   return (
-    <QuizContext.Provider value={{ questions, setQuestions }}>
+    <QuizContext.Provider
+      value={{
+        scorePage,
+        setScorePage,
+        dbQues,
+        setDbQues,
+        questions,
+        setQuestions,
+        score,
+        setScore,
+      }}
+    >
       {children}
     </QuizContext.Provider>
   );

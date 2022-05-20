@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../../Context/loginContext";
 
-export function Nav(){
-return (
+export function Nav() {
+  const { login, setLogin } = useAuth();
+
+  function logOutHandler() {
+    localStorage.removeItem("login");
+    setLogin(false);
+  }
+
+  function LoginHandler() {}
+  return (
     <nav className="navbar">
       <Link to={"/"}>
         <p className="nav-title">
@@ -10,19 +19,9 @@ return (
         </p>
       </Link>
 
-{/*       
       {login ? (
-        <button className="profile-btn">
-          <All.IconoirProfileCircled className="profile" />
-
-          <div className="profile-options">
-            <ul>
-              
-                <li onClick={()=>navigate("")}>Profile</li>
-              
-              <li onClick={logOutHandler}>Log Out</li>
-            </ul>
-          </div>
+        <button className="btn btn-primary login-btn" onClick={logOutHandler}>
+          Log Out
         </button>
       ) : (
         <Link to="/SignIn" className="login-btn">
@@ -31,7 +30,7 @@ return (
             Log In
           </button>
         </Link>
-      )} */}
+      )}
     </nav>
   );
-      }
+}
