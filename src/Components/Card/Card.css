@@ -1,0 +1,29 @@
+.quiz-card {
+  cursor: pointer;
+  width: 22rem;
+  border-radius: 8px;
+  background-color: var(--grey);
+}
+a{
+    background-color: transparent;
+}
+.quiz-card:hover{
+    transform: scale(1.03);
+}
+.card-title{
+    text-align: center;
+    background-color: var(--grey);
+}
+.card-img{
+    width: 20rem;
+    margin: 1rem;
+}
+.card-txt{
+    text-align: justify;
+    margin: 10px;
+    margin-block-start: 1rem;
+    background-color: var(--grey);
+}
+.w-100{
+    width: 90%;
+}
