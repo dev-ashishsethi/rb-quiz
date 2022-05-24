@@ -73,7 +73,7 @@ export function SignUp() {
             Email
           </label>
           <input
-            type="text"
+            type="email"
             placeholder="Enter Email"
             className="sign-input-box"
             id="email-input"

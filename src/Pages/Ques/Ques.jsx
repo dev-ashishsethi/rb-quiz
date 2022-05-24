@@ -20,6 +20,8 @@ export function Ques() {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const navigate = useNavigate();
 
+  //! fix pointer events none
+
   function getClassname(option) {
     if (selectedAnswer === "") {
       return "";
@@ -45,20 +47,37 @@ export function Ques() {
     }
   }
 
-  function answerHandler(e) {
-    setTimeout(() => {
-      setIndex((prevIndex) => {
-        if (prevIndex < 2) {
-          return prevIndex + 1;
-        } else {
-          navigate("/Score");
-          return prevIndex+1
-        }
-      });
-    }, 1000);
-    
-    setSelectedAnswer(e.target.innerText);
+  function timeout(ms) {
+    return new Promise(res => setTimeout(res, ms));
   }
+
+  async function answerHandler(e) {
+    setSelectedAnswer(e.target.innerText)
+    await timeout(900);
+    setIndex((prevIndex) => {
+            if (prevIndex < 2) {
+              return prevIndex + 1;
+            } else {
+              navigate("/Score");
+              return prevIndex+1
+            }
+          });
+  }
+
+  // function answerHandler(e) {
+  //   setTimeout(() => {
+  //     setIndex((prevIndex) => {
+  //       if (prevIndex < 2) {
+  //         return prevIndex + 1;
+  //       } else {
+  //         navigate("/Score");
+  //         return prevIndex+1
+  //       }
+  //     });
+  //   }, 1000);
+    
+  //   setSelectedAnswer(e.target.innerText);
+  // }
 
   useEffect(() => {
     setQuestions(dbQues?.find((quiz) => quiz._id === quizId)?.questions[index]);
@@ -109,16 +128,16 @@ export function Ques() {
           </h1>
           <Rules />
           <h2>Score: {score}</h2>
-          <ul className="options">
+          <div className="options">
             {questions?.incorrect_answers?.map((option) => (
-              <li
+              <button
                 onClick={answerHandler}
                 className={`option-answer ${getClassname(option)}`}
               >
                 {option}
-              </li>
+              </button>
             ))}
-          </ul>
+          </div>
         </div>
       ) : (
         <h1>Loading</h1>

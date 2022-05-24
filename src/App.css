@@ -3,14 +3,19 @@
 :root {
   --grey: #202020;
 }
+
 .App {
-  margin-inline: 10rem;
+  height: 100%;
+  max-width: min(85vw, 100%, 960px);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
 }
+
 .login-btn {
   margin-top: 8px;
 }

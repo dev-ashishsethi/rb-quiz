@@ -37,6 +37,7 @@
 #email-label{
     grid-area: emaillabel;
 }
+
 #email-input{
     grid-area: email;
 }
@@ -44,6 +45,7 @@
 #pass-label{
     grid-area: passlabel;
 }
+
 #pass-input{
     grid-area: pass;
 }
@@ -51,6 +53,7 @@
 #confpass-label{
     grid-area: confpasslabel;
 }
+
 #confpass-input{
     grid-area: confpass;
 }
@@ -58,6 +61,7 @@
 #form-btn3{
     grid-area: btn1;
 }
+
 #form-btn4{
     grid-area: btn2;
     text-align: center;

@@ -1,29 +1,62 @@
 .question {
   display: flex;
   justify-content: space-evenly;
-  height: 100vh;
+  height: max-content;
   flex-direction: column;
-  margin-inline: 20rem;
+  gap: 1rem;
+  margin-block-start: 1rem;
 }
 .options {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  cursor: pointer;
   gap: 2rem;
+  padding-inline-start: 0rem;
 }
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .option-answer {
   color: var(--white);
+  cursor: pointer;
   border-radius: 10px;
+  border-color: transparent;
   background-color: var(--grey);
   font-size: 1.2rem;
   padding: 3rem;
   width: 25rem;
 }
 
-.correct {
-  background-color: green;
+.option-answer:active {
+  transform: scale(0.97);
+  transition: 150ms;
 }
-.wrong {
-  background-color: red;
+
+.option-answer:hover{
+  background-color: #303030;
+}
+
+.option-answer:first-child {
+  animation: settle-in 500ms ease-in;
+}
+
+.option-answer:nth-child(2) {
+  animation: settle-in 650ms ease-in;
+}
+
+.option-answer:nth-child(3) {
+  animation: settle-in 700ms ease-in;
+}
+
+.option-answer:last-child {
+  animation: settle-in 850ms ease-in;
+}
+
+.option-answer.correct {
+  background-color: var(--green-success);
+}
+.option-answer.wrong {
+  background-color: #FF3842;
 }

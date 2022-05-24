@@ -13,7 +13,7 @@ export function SignIn() {
     email: "",
     password: "",
   });
-  const onChangeHandler = (e) => {
+  function onChangeHandler(e) {
     setLoginData((loginData) => ({
       ...loginData,
       [e.target.name]: e.target.value,
@@ -31,7 +31,7 @@ export function SignIn() {
       localStorage.setItem("user data", response.user.providerData[0]);
       setLogin(true);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
@@ -43,7 +43,7 @@ export function SignIn() {
       localStorage.setItem("user data", response.user.providerData[0]);
       setLogin(true);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 
@@ -66,12 +66,11 @@ export function SignIn() {
               Email
             </label>
             <input
-              type="text"
+              type="email"
               placeholder="Enter Email"
               className="sign-input-box"
               id="email-input"
               name="email"
-              value={loginData.email}
               onChange={onChangeHandler}
             />
 
@@ -85,7 +84,6 @@ export function SignIn() {
               id="pass-input"
               name="password"
               onChange={onChangeHandler}
-              value={loginData.password}
             />
 
             <button

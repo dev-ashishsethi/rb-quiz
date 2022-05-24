@@ -1,0 +1,18 @@
+@media (min-width: 960px) {
+
+    .navbar {
+        align-items: center;
+    }
+
+    .nav-title {
+        font-size: 7rem;
+    }
+
+    .nav-title-short {
+        font-size: 3rem;
+    }
+}
+
+.nav-title {
+    transition: 550ms ease-in-out;
+}

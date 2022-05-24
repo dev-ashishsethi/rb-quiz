@@ -3,20 +3,37 @@
 }
 .scorecard {
   text-align: right;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
+
 .green {
-  color: green;
+  color: var(--green-success);
 }
 .score-ques {
   background-color: transparent;
 }
+
 .score-question {
   background-color: #202020;
   padding: 2rem;
   padding-left: 4rem;
   border-radius: 10px;
-  margin-top: 3rem;
+  margin-block-start: 2rem;
+  font-size: 12px;
+  animation: slide-up 500ms forwards;
 }
+
+/*! use calc function after restructure */
+
+.score-question + .score-question {
+  animation: slide-up 600ms forwards;
+}
+
+.score-question + .score-question + .score-question {
+  animation: slide-up 700ms forwards;
+}
+
 .score-answer {
   background-color: transparent;
   display: inline-block;

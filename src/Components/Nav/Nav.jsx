@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useAuth } from "../../Context/loginContext";
+import "./Nav.css";
 
 export function Nav() {
   const { login, setLogin } = useAuth();

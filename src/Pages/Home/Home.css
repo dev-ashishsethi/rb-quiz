@@ -2,8 +2,19 @@
     text-align: center;
 }
 .card-section {
-  display: flex;
-  justify-content: center;
+  display: grid;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  margin-block-end: 1rem;
+}
+
+@media (min-width:960px) {
+  .card-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width:640px) and (max-width:960px) {
+  .card-section {
+      grid-template-columns: repeat(2, 1fr);
+  }
 }

@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useState, useRef, useLayoutEffect} from "react";
 import "./Rules.css";
 
 export function Rules() {
+
   const [display, setDisplay] = useState("");
-  function closeHandler() {
-    setDisplay("display-none");
+  const dialogModalref  = useRef(null);
+  function timeout(ms) {
+    return new Promise(res => setTimeout(res, ms))
   }
+  
+  async function closeHandler() {
+    setDisplay("out-of-view");
+    await timeout(350);
+    dialogModalref.current.close();
+  }
+
+  useLayoutEffect(() => {
+    dialogModalref.current.showModal();
+  }, [])
+
   return (
-    <div className={`rules-modal ${display}`}>
+    <dialog ref={dialogModalref} className={`rules-modal ${display}`}>
+      <div className="close-btn-container">
+        <span className="close-btn" onClick={closeHandler}>
+          x
+        </span>
+      </div>
       <h2 className="rules-title">Quiz Rules </h2>
-      <span className="close-btn" onClick={closeHandler}>
-        x
-      </span>
       <ol className="rules">
         <li className="rules-list">
           For each correct answer you will be awarded with 5 points.
@@ -24,7 +39,9 @@ export function Rules() {
           After finishing the quiz total score will be shown.
         </li>
       </ol>
-      <button className="btn btn-primary" onClick={closeHandler}>Start Quiz</button>
-    </div>
+      <div className="modal-btn-container">
+        <button className="btn btn-primary" onClick={closeHandler}>Start Quiz</button>
+      </div>
+    </dialog>
   );
 }

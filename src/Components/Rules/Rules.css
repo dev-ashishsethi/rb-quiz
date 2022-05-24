@@ -1,34 +1,58 @@
 .rules-modal {
-  position: absolute;
-  box-shadow: 100px 100px 0px 100vh #040404a8;
-  left: 35%;
-  padding: 5rem;
+  padding: 2rem;
   background-color: var(--grey);
+  animation: slide-up 400ms ease-in-out;
   border-radius: 10px;
 }
-.rules-title {
+
+dialog::backdrop {
+  backdrop-filter: blur(3px);
+  animation: fade-in 500ms ease-in-out;
+}
+
+.modal-btn-container {
+  text-align: end;
+  margin-block-start: 1.5rem;
+  padding-inline-end: 1rem;
   background-color: transparent;
 }
+
+.rules-modal .btn {
+  margin: 0;
+}
+
+.rules-title {
+  background-color: transparent;
+  margin-block-start: 0;
+}
+
 .rules {
   background-color: transparent;
 }
+
 .rules-list {
   color: var(--white);
   background-color: transparent;
+  margin-block-end: 1rem;
 }
+
+.close-btn-container {
+  background-color: transparent;
+  text-align: end;
+}
+
 .close-btn {
-  position: absolute;
   color: var(--white);
-  top: 0;
-  right: 0;
   margin: 1rem;
   background-color: transparent;
   cursor: pointer;
   border: 1px solid var(--white);
-  padding-inline: 5px;
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
+  padding-block-end: 1px;
   border-radius: 50%;
 }
 
-.display-none {
-  display: none;
+.out-of-view {
+  animation: slide-down 400ms ease-in-out;
 }

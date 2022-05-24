@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import randomImage from "../../assets/images/random.jpg";
 import "./Card.css";
 export function Card({ data }) {
   return (
