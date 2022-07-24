@@ -7,6 +7,7 @@ import "./Ques.css";
 
 export function Ques() {
   const { quizId } = useParams();
+   const db = data;
   const {
     scorePage,
     setScorePage,
@@ -20,7 +21,7 @@ export function Ques() {
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const navigate = useNavigate();
 
-  //! fix pointer events none
+ 
 
   function getClassname(option) {
     if (selectedAnswer === "") {
@@ -80,7 +81,7 @@ export function Ques() {
   // }
 
   useEffect(() => {
-    setQuestions(dbQues?.find((quiz) => quiz._id === quizId)?.questions[index]);
+    setQuestions(db?.find((quiz) => quiz._id === quizId)?.questions[index]);
     if (index === 0) {
       setScore(0);
       setScorePage([
@@ -121,7 +122,7 @@ export function Ques() {
 
   return (
     <>
-      {dbQues.length > 0 ? (
+      {db.length > 0 ? (
         <div className="question">
           <h1>
             Question {index + 1}: {questions?.question}

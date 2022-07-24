@@ -5,6 +5,7 @@ import {
   get,
   child,
 } from "../firebase.config";
+import { data } from "../../data.js";
 
 const QuizContext = createContext();
 
@@ -24,11 +25,14 @@ export function QuizProvider({ children }) {
 
   useEffect(() => {
     (async () => {
+      
+      const db = data;
       const dbRef = realTimeDBRef(firebaseRealtimeDB);
       try {
         const allQuestions = await get(child(dbRef, "quizDB"));
 
-        setDbQues(allQuestions.val());
+        // setDbQues(allQuestions.val());
+        setDbQues(db);
       } catch (error) {
         console.log(error);
       }
