@@ -7,7 +7,6 @@ import "./Ques.css";
 
 export function Ques() {
   const { quizId } = useParams();
-   const db = data;
   const {
     scorePage,
     setScorePage,
@@ -81,7 +80,7 @@ export function Ques() {
   // }
 
   useEffect(() => {
-    setQuestions(db?.find((quiz) => quiz._id === quizId)?.questions[index]);
+    setQuestions(dbQues?.find((quiz) => quiz._id === quizId)?.questions[index]);
     if (index === 0) {
       setScore(0);
       setScorePage([
@@ -122,7 +121,7 @@ export function Ques() {
 
   return (
     <>
-      {db.length > 0 ? (
+      {dbQues.length > 0 ? (
         <div className="question">
           <h1>
             Question {index + 1}: {questions?.question}
