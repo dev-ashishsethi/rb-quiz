@@ -1,11 +1,5 @@
+import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react";
-import {
-  firebaseRealtimeDB,
-  realTimeDBRef,
-  get,
-  child,
-} from "../firebase.config";
-
 const QuizContext = createContext();
 
 export function QuizProvider({ children }) {
@@ -24,11 +18,10 @@ export function QuizProvider({ children }) {
 
   useEffect(() => {
     (async () => {
-      const dbRef = realTimeDBRef(firebaseRealtimeDB);
       try {
-        const allQuestions = await get(child(dbRef, "quizDB"));
-
-        setDbQues(allQuestions.val());
+        const allQuestions = await axios.get('https://Quiz.aashishsethii01.repl.co');
+        console.log(allQuestions?.data.quizDB);
+        setDbQues(allQuestions?.data.quizDB);
       } catch (error) {
         console.log(error);
       }

@@ -19,7 +19,7 @@ export function Nav() {
           <span className="nav-title-short"> Quiz </span>
         </p>
       </Link>
-
+{/* 
       {login ? (
         <button className="btn btn-primary login-btn" onClick={logOutHandler}>
           Log Out
@@ -31,7 +31,7 @@ export function Nav() {
             Log In
           </button>
         </Link>
-      )}
+      )} */}
     </nav>
   );
 }
